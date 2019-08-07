@@ -8,14 +8,13 @@ from ruqqus.helpers.wrappers import *
 from ruqqus.classes import *
 from ruqqus.__main__ import app, db
 
-def send_mail(to_address, subject, plaintext, html, from_address="Ruqqus <noreply@mail.ruqqus.com>"):
+def send_mail(to_address, subject, html, from_address="Ruqqus <noreply@mail.ruqqus.com>"):
 
     url="https://api.mailgun.net/v3/mail.ruqqus.com/messages"
 
     data={"from": from_address,
           "to": [to_address],
           "subject": subject,
-          "text": plaintext,
           "html": html
           }
         
@@ -30,7 +29,7 @@ def send_verification_email(user):
     url=f"https://{environ.get('domain')}/activate"
     now=int(time.time())
 
-    token=generate_hash(f"{user.email}+{user.id}+{now}")
+    token=generate_hash(f"verify+{user.email}+{user.id}+{now}")
     params=f"?email={escape(user.email)}&id={user.id}&time={now}&token={token}"
 
     link=url+params
@@ -40,13 +39,32 @@ def send_verification_email(user):
          <a href="{link}">Click here</a> to verify your email address.</p>
          """
 
-    text=f"Thank you for signing up. Click to verify your email address: {link}"
+    send_mail(to_address=user.email,
+              html=html,
+              subject="Validate your Ruqqus account"
+              )
+
+def send_reset_email(user):
+
+    url=f"https://{environ.get('domain')}/reset"
+    now=int(time.time())
+
+    token=generate_hash(f"reset+{user.email}+{user.id}+{now}")
+    params=f"?email={escape(user.email)}&id={user.id}&time={now}&token={token}"
+
+    link=url+params
+
+    html=f"""
+         <p>Hi, {user.username}!<p>
+         <p>A password reset was requested for your account.</p>
+         <a href="{link}">Click here</a> to reset your Ruqqus password.</p>
+         """
 
     send_mail(to_address=user.email,
               html=html,
-              plaintext=text,
-              subject="Validate your Ruqqus account"
+              subject="Ruqqus Password Reset"
               )
+    
 
 @app.route("/activate", methods=["GET"])
 @auth_desired
@@ -61,7 +79,7 @@ def activate():
         return render_template("message.html", title="Verification link expired.", message="That link has expired."), 410
 
 
-    if not validate_hash(f"{email}+{id}+{timestamp}", token):
+    if not validate_hash(f"verify+{email}+{id}+{timestamp}", token):
         abort(400)
 
     user = db.query(User).filter_by(id=id).first()
