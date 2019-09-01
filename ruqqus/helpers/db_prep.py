@@ -106,6 +106,23 @@ IMMUTABLE
 RETURNS NULL ON NULL INPUT;
 """)
 
+#flags
+c.execute("""
+CREATE OR REPLACE FUNCTION flags(submissions)
+RETURNS bigint AS '
+  SELECT COUNT(*)
+  FROM flags
+  LEFT JOIN users
+  ON users.id=flags.user_id
+  WHERE flags.resolved=false
+    AND flags.post_id = $1.id
+    AND users.is_banned=false
+  '
+LANGUAGE SQL
+IMMUTABLE
+RETURNS NULL ON NULL INPUT;
+""")
+
 #=========COMMENTS========
 
 #ups
@@ -153,6 +170,22 @@ IMMUTABLE
 RETURNS NULL ON NULL INPUT;
 """)
 
+#flags
+c.execute("""
+CREATE OR REPLACE FUNCTION flags(comments)
+RETURNS bigint AS '
+  SELECT COUNT(*)
+  FROM commentflags
+  LEFT JOIN users
+  ON users.id=commentflags.user_id
+  WHERE commentflags.resolved=false
+    AND commentflags.comment_id = $1.id
+    AND users.is_banned=false
+  '
+LANGUAGE SQL
+IMMUTABLE
+RETURNS NULL ON NULL INPUT;
+""")
 
 #===========USERS=============
 
@@ -172,6 +205,23 @@ RETURNS numeric AS '
 LANGUAGE SQL
 IMMUTABLE
 RETURNS NULL ON NULL INPUT
+""")
+
+#flags
+c.execute("""
+CREATE OR REPLACE FUNCTION flags(users)
+RETURNS bigint AS '
+  SELECT COUNT(*)
+  FROM userflags
+  LEFT JOIN users
+  ON users.id=userflags.user_id
+  WHERE userflags.resolved=false
+    AND userflags.target_id = $1.id
+    AND users.is_banned=false
+  '
+LANGUAGE SQL
+IMMUTABLE
+RETURNS NULL ON NULL INPUT;
 """)
 
 
