@@ -13285,7 +13285,7 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 
 .post-img-overlay {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   bottom: 0;
   padding: 0.25rem 0.5rem;
   text-align: right;
