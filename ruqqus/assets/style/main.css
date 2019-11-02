@@ -12526,6 +12526,7 @@ ol > li::before {
   border-radius: 50rem;
   background-color: #F05D5E;
   position: absolute;
+  color: #ffffff;
   font-size: 12px;
   font-weight: 500;
   top: -6px;

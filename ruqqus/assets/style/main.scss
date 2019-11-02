@@ -461,6 +461,7 @@ ol > li::before {
     border-radius: 50rem;
     background-color: $danger;
     position: absolute;
+    color: $white;
     font-size: $extra-small-font-size;
     font-weight: $font-weight-medium;
     top: -6px;
