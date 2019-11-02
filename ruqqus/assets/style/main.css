@@ -12520,7 +12520,7 @@ ol > li::before {
   color: #ffffff;
 }
 
-#notifications .badge-count {
+.nav-link .badge-count {
   width: 20px;
   height: 20px;
   border-radius: 50rem;
