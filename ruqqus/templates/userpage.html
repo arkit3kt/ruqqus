@@ -32,6 +32,10 @@
 <div class="sidebar-section sidebar-profile-basic">
   <div class="body">
     <h1 class="h6 d-inline-block mb-0 mr-2" style="color:#{{ u.color }}">@{{ u.username }}</h1>
+    <span>
+      {% if u.admin_level>=3 %}<i class="fad fa-badge-check text-success" data-toggle="tooltip" data-placement="bottom" title="Admin"></i>{% endif %}
+      {% if u.real_id %}<span class="badge badge-pill text-white badge-info">{{ u.real_id }}</span>{% endif %}
+    </span>
     <div class="profile-actions d-inline-block">
      {% if v and v.id != u.id %}
      <div class="dropdown show">
@@ -59,10 +63,6 @@
   </div>
 </div>
 {% endif %}   
-</div>
-<div>
-  {% if u.admin_level>=3 %}<span class="badge badge-pill badge-danger text-white">Admin</span>{% endif %}
-  {% if u.real_id %}<span class="badge badge-pill text-white badge-info">{{ u.real_id }}</span>{% endif %}
 </div>
 </div>
 </div>
@@ -201,43 +201,43 @@
     </p>
     <div class="profile-actions d-inline-block">
       {% if v and v.id != u.id %}
-    <!-- Modal -->
-    <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#profileModal"></i>
+      <!-- Modal -->
+      <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#profileModal"></i>
 
-    <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="Profile Actions" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-body">
-            <div class="list-group">
-            <a href="/settings/profile#bio" class="list-group-item list-group-item-action"><i class="fas fa-paper-plane mr-2"></i>Message</a>
-              <a href="/settings/security" class="list-group-item list-group-item-action"><i class="fas fa-flag mr-2"></i>Flag</a>
+      <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="Profile Actions" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="list-group">
+                <a href="/settings/profile#bio" class="list-group-item list-group-item-action"><i class="fas fa-paper-plane mr-2"></i>Message</a>
+                <a href="/settings/security" class="list-group-item list-group-item-action"><i class="fas fa-flag mr-2"></i>Flag</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    {% endif %}
-    {% if v and v.id == u.id %}
+      {% endif %}
+      {% if v and v.id == u.id %}
 
-    <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#settingsModal"></i>
+      <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#settingsModal"></i>
 
-    <!-- Modal -->
-    <div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="Profile Actions" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-body">
-            <div class="list-group">
-            <a href="/settings/profile#bio" class="list-group-item list-group-item-action"><i class="fas fa-user-circle mr-2"></i>Edit profile</a>
-              <a href="/settings/security" class="list-group-item list-group-item-action"><i class="fas fa-cog mr-2"></i>Account details</a>
+      <!-- Modal -->
+      <div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="Profile Actions" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="list-group">
+                <a href="/settings/profile#bio" class="list-group-item list-group-item-action"><i class="fas fa-user-circle mr-2"></i>Edit profile</a>
+                <a href="/settings/security" class="list-group-item list-group-item-action"><i class="fas fa-cog mr-2"></i>Account details</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      {% endif %} 
     </div>
-    {% endif %} 
+
   </div>
-
-</div>
 </div>
 </div>
 
