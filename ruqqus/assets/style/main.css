@@ -2230,7 +2230,7 @@ textarea.form-control {
   font-size: 0.875rem;
   line-height: 1.5;
   color: #ffffff;
-  background-color: rgba(35, 206, 107, 0.9);
+  background-color: #23ce6b;
   border-radius: 0.25rem;
 }
 
@@ -2341,7 +2341,7 @@ textarea.form-control {
   font-size: 0.875rem;
   line-height: 1.5;
   color: #ffffff;
-  background-color: rgba(240, 93, 94, 0.9);
+  background-color: #f05d5e;
   border-radius: 0.25rem;
 }
 
@@ -6538,7 +6538,7 @@ a.close.disabled {
   opacity: 0;
 }
 .tooltip.show {
-  opacity: 0.9;
+  opacity: 1;
 }
 .tooltip .arrow {
   position: absolute;
