@@ -12509,7 +12509,7 @@ ol > li::before {
 .navbar-dark .navbar-nav .nav-link .fa, .navbar-dark .navbar-nav .nav-link .fas, .navbar-dark .navbar-nav .nav-link .far, .navbar-dark .navbar-nav .nav-link .fab {
   color: #ffffff;
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 .navbar-dark .navbar-nav .show > .nav-link:focus .fa, .navbar-dark .navbar-nav .show > .nav-link:focus .fas, .navbar-dark .navbar-nav .show > .nav-link:focus .far, .navbar-dark .navbar-nav .show > .nav-link:focus .fab {

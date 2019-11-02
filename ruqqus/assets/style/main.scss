@@ -444,7 +444,7 @@ ol > li::before {
 .navbar-dark .navbar-nav .nav-link .fa, .navbar-dark .navbar-nav .nav-link .fas, .navbar-dark .navbar-nav .nav-link .far, .navbar-dark .navbar-nav .nav-link .fab {
     color: $white;
     text-align: center;
-    font-size: $font-size-lg;
+    font-size: $font-size-base;
 }
 
 .navbar-dark .navbar-nav .show>.nav-link:focus .fa, .navbar-dark .navbar-nav .show>.nav-link:focus .fas, .navbar-dark .navbar-nav .show>.nav-link:focus .far, .navbar-dark .navbar-nav .show>.nav-link:focus .fab {
