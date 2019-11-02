@@ -12509,7 +12509,7 @@ ol > li::before {
 .navbar-dark .navbar-nav .nav-link .fa, .navbar-dark .navbar-nav .nav-link .fas, .navbar-dark .navbar-nav .nav-link .far, .navbar-dark .navbar-nav .nav-link .fab {
   color: #ffffff;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 .navbar-dark .navbar-nav .show > .nav-link:focus .fa, .navbar-dark .navbar-nav .show > .nav-link:focus .fas, .navbar-dark .navbar-nav .show > .nav-link:focus .far, .navbar-dark .navbar-nav .show > .nav-link:focus .fab {
@@ -14328,6 +14328,10 @@ pre .clo, pre .opn, pre .pun, code .clo, code .opn, code .pun {
   .navbar-dark .navbar-nav .nav-link:active {
     background-color: rgba(0, 0, 0, 0.15);
     border-radius: 0;
+  }
+
+  .navbar-dark .navbar-nav .nav-link .fa, .navbar-dark .navbar-nav .nav-link .fas, .navbar-dark .navbar-nav .nav-link .far, .navbar-dark .navbar-nav .nav-link .fab {
+    font-size: 1rem;
   }
 
   #thread {
