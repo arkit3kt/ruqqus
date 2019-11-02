@@ -1429,7 +1429,7 @@ ul.comment-section {
 .comment .comment-collapse::before {
     content: "";
     position: absolute;
-    font-family: "Font Awesome 5 Free";
+    font-family: "Font Awesome 5 Pro";
     border-left: 2px solid #E0E0E0;
     font-size: $font-size-base;
     color: $purple;
@@ -1445,7 +1445,7 @@ ul.comment-section {
 
 .comment.collapsed .comment-collapse::before {
     content: "\f138";
-    font-family: "Font Awesome 5 Free";
+    font-family: "Font Awesome 5 Pro";
     border-left: none;
     color: $gray-500;
     top: 3px;
