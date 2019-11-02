@@ -382,11 +382,11 @@ ol > li::before {
 // Nav links
 
 .navbar-nav .nav-link {
-    padding: 0.35rem 0.75rem;
+    padding: 0.25rem 0.5rem;
 }
 
 .navbar-expand-md .navbar-nav .nav-link {
-    padding: 0.35rem 0.75rem;
+    padding: 0.25rem 0.5rem;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -453,6 +453,20 @@ ol > li::before {
 
 .navbar-dark .navbar-nav .nav-link:hover:active .fa, .navbar-dark .navbar-nav .nav-link:hover:active .fas, .navbar-dark .navbar-nav .nav-link:hover:active .far, .navbar-dark .navbar-nav .nav-link:hover:active .fab {
     color: $white;
+}
+
+#notifications .badge-count {
+    width: 20px;
+    height: 20px;
+    border-radius: 50rem;
+    background-color: $danger;
+    position: absolute;
+    font-size: $extra-small-font-size;
+    font-weight: $font-weight-medium;
+    top: -6px;
+    left: 14px;
+    line-height: 1.25rem;
+    border: 2px solid $primary;
 }
 
 .post-nav .nav-link {

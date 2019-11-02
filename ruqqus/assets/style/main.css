@@ -12447,11 +12447,11 @@ ol > li::before {
 }
 
 .navbar-nav .nav-link {
-  padding: 0.35rem 0.75rem;
+  padding: 0.25rem 0.5rem;
 }
 
 .navbar-expand-md .navbar-nav .nav-link {
-  padding: 0.35rem 0.75rem;
+  padding: 0.25rem 0.5rem;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -12518,6 +12518,20 @@ ol > li::before {
 
 .navbar-dark .navbar-nav .nav-link:hover:active .fa, .navbar-dark .navbar-nav .nav-link:hover:active .fas, .navbar-dark .navbar-nav .nav-link:hover:active .far, .navbar-dark .navbar-nav .nav-link:hover:active .fab {
   color: #ffffff;
+}
+
+#notifications .badge-count {
+  width: 20px;
+  height: 20px;
+  border-radius: 50rem;
+  background-color: #F05D5E;
+  position: absolute;
+  font-size: 12px;
+  font-weight: 500;
+  top: -6px;
+  left: 14px;
+  line-height: 1.25rem;
+  border: 2px solid #6350CC;
 }
 
 .post-nav .nav-link {
