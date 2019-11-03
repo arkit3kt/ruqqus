@@ -26,11 +26,13 @@ def login_get(v):
     if v:
         return redirect("/")
 
-    random_image()
+    redir=request.args.get("redirect",None)
+    
 
     return render_template("login.html",
                            failed=False,
-                           i=random_image())
+                           i=random_image(),
+                           redirect=redir)
 
 #login post procedure
 @app.route("/login", methods=["POST"])
