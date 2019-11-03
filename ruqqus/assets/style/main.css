@@ -13670,9 +13670,7 @@ ul.comment-section {
 .profile-actions .fa, .profile-actions .fas, .profile-actions .far {
   font-size: 13px;
   color: #ACACAC;
-  margin-right: 0.5rem;
   width: 1rem;
-  vertical-align: middle;
 }
 
 .profile-actions .dropdown-item:active .fa, .profile-actions .dropdown-item:active .fas, .profile-actions .dropdown-item:active .far {
