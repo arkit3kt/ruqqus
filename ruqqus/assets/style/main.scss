@@ -357,6 +357,10 @@ ol > li::before {
 
 // Navbar and tab Bar
 
+.navbar-toggler-icon {
+    background-image: none;
+}
+
 .navbar-expand-md .navbar-nav .nav-link {
     padding-left: 1rem;
     padding-right: 1rem;
