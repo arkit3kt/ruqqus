@@ -752,6 +752,10 @@ label.terms {
     min-width: 40px;
 }
 
+.voting div:focus {
+    outline: 0;
+}
+
 .arrow-up::before {
     cursor: pointer;
     color: $gray-400;
