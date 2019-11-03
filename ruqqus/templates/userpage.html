@@ -37,10 +37,10 @@
   <div class="body">
   <h1 class="h6 d-inline-block mb-0" style="color:#{{ u.color }}">@{{ u.username }}</h1>
     <span>
-      {% if u.admin_level>=3 %}<i class="fad fa-badge-check text-success mr-2" data-toggle="tooltip" data-placement="bottom" title="Admin"></i>{% endif %}
+      {% if u.admin_level>=3 %}<i class="fad fa-badge-check text-primary ml-1" data-toggle="tooltip" data-placement="bottom" title="Admin"></i>{% endif %}
       {% if u.real_id %}<span class="badge badge-pill text-white badge-info">{{ u.real_id }}</span>{% endif %}
     </span>
-    <div class="profile-actions d-inline-block">
+    <div class="profile-actions d-inline-block float-right">
      {% if v and v.id != u.id %}
      <div class="dropdown show">
       <a href="#" role="button" id="dropdownProfileActionsLink" data-toggle="dropdown"
@@ -197,7 +197,7 @@
     </div>
     <h1 class="h6 d-inline-block text-gray mb-3">@{{ u.username }}</h1>
     <span>
-      {% if u.admin_level>=3 %}<i class="fad fa-badge-check text-success" data-toggle="tooltip" data-placement="bottom" title="Admin"></i>{% endif %}
+      {% if u.admin_level>=3 %}<i class="fad fa-badge-check text-primary" data-toggle="tooltip" data-placement="bottom" title="Admin"></i>{% endif %}
       {% if u.real_id %}<span class="badge badge-pill text-white badge-info">{{ u.real_id }}</span>{% endif %}
     </span>
     <p class="text-muted text-small px-3">
