@@ -13501,6 +13501,7 @@ ul.comment-section {
 .comment.collapsed .comment-collapse::before {
   content: "";
   font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
   border-left: none;
   color: #adb5bd;
   top: 3px;
