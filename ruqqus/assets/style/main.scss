@@ -758,30 +758,27 @@ label.terms {
 
 .arrow-up::before {
     cursor: pointer;
+    font-size: $font-size-base;
     color: $gray-400;
     font-family: "Font Awesome 5 Pro";
     content: "\f357";
+
 }
 
 .arrow-down::before {
     cursor: pointer;
+    font-size: $font-size-base;
     color: $gray-400;
     font-family: "Font Awesome 5 Pro";
     content: "\f354";
 }
 
 .upvoted .arrow-up::before {
-    cursor: pointer;
     color: $upvote;
-    font-family: "Font Awesome 5 Pro";
-    content: "\f357";
 }
 
 .downvoted .arrow-down::before {
-    cursor: pointer;
     color: $downvote;
-    font-family: "Font Awesome 5 Pro";
-    content: "\f354";
 }
 
 .comment-actions .arrow-up {

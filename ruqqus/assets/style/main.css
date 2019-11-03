@@ -12813,6 +12813,7 @@ label.terms {
 
 .arrow-up::before {
   cursor: pointer;
+  font-size: 1rem;
   color: #C2C2C2;
   font-family: "Font Awesome 5 Pro";
   content: "";
@@ -12820,23 +12821,18 @@ label.terms {
 
 .arrow-down::before {
   cursor: pointer;
+  font-size: 1rem;
   color: #C2C2C2;
   font-family: "Font Awesome 5 Pro";
   content: "";
 }
 
 .upvoted .arrow-up::before {
-  cursor: pointer;
   color: #6350CC;
-  font-family: "Font Awesome 5 Pro";
-  content: "";
 }
 
 .downvoted .arrow-down::before {
-  cursor: pointer;
   color: #48A9A6;
-  font-family: "Font Awesome 5 Pro";
-  content: "";
 }
 
 .comment-actions .arrow-up {
