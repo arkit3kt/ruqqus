@@ -13454,14 +13454,13 @@ ul.comment-section {
 }
 
 .comment-write.collapsed textarea:focus, .comment-write.collapsed textarea:active {
-  background-color: #F1F1F1;
+  background-color: #ffffff;
 }
 
 .comment-write.collapsed textarea {
   width: 100%;
   box-sizing: border-box;
   padding: 0.5rem 0.75rem;
-  background: #ffffff;
   min-height: 84px;
 }
 

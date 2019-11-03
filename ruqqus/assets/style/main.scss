@@ -1428,14 +1428,13 @@ ul.comment-section {
 }
 
 .comment-write.collapsed textarea:focus, .comment-write.collapsed textarea:active {
-    background-color: $gray-100;
+    background-color: $white;
 }
 
 .comment-write.collapsed textarea {
     width: 100%;
     box-sizing: border-box;
     padding: .5rem .75rem;
-    background: $white;
     min-height: 84px;
 }
 
