@@ -12424,6 +12424,10 @@ ol > li::before {
   background-image: none;
 }
 
+.navbar-toggler {
+  border: none;
+}
+
 .navbar-expand-md .navbar-nav .nav-link {
   padding-left: 1rem;
   padding-right: 1rem;
