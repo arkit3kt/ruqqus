@@ -357,11 +357,11 @@ ol > li::before {
 
 // Navbar and tab Bar
 
-.navbar-toggler-icon {
+.navbar-toggler-icon, .navbar-dark .navbar-toggler-icon, .navbar-light .navbar-toggler-icon {
     background-image: none;
 }
 
-.navbar-toggler {
+.navbar-toggler, .navbar-dark .navbar-toggler, .navbar-light .navbar-toggler {
     border: none;
 }
 
