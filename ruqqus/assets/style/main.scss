@@ -1427,6 +1427,10 @@ ul.comment-section {
     margin-top: 1.5rem;
 }
 
+.comment-write.collapsed textarea:focus, .comment-write.collapsed textarea:active {
+    background-color: $gray-100;
+}
+
 .comment-write.collapsed textarea {
     width: 100%;
     box-sizing: border-box;
