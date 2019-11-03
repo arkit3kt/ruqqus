@@ -358,7 +358,7 @@ ol > li::before {
 // Navbar and tab Bar
 
 .navbar-toggler-icon, .navbar-dark .navbar-toggler-icon, .navbar-light .navbar-toggler-icon {
-    background-image: none;
+    background: transparent;
 }
 
 .navbar-toggler, .navbar-dark .navbar-toggler, .navbar-light .navbar-toggler {
@@ -1436,7 +1436,7 @@ ul.comment-section {
 }
 
 .comment-write textarea {
-    background: $light;
+    background: $gray-100;
 }
 
 .comment-write .comment-format {

@@ -12421,7 +12421,7 @@ ol > li::before {
 }
 
 .navbar-toggler-icon, .navbar-dark .navbar-toggler-icon, .navbar-light .navbar-toggler-icon {
-  background-image: none;
+  background: transparent;
 }
 
 .navbar-toggler, .navbar-dark .navbar-toggler, .navbar-light .navbar-toggler {
@@ -13462,7 +13462,7 @@ ul.comment-section {
 }
 
 .comment-write textarea {
-  background: #FAFAFA;
+  background: #F1F1F1;
 }
 
 .comment-write .comment-format {
