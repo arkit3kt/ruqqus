@@ -15,7 +15,7 @@ $red:  #F05D5E;
 $gray: #5F5F5F;
 $green: #23CE6B;
 
-$gray-100: #F8F8F9;
+$gray-100: #F1F1F1;
 $gray-200: #EBE9EF;
 $gray-300: #E0E4E9;
 $gray-400: #C2C2C2;
@@ -558,7 +558,6 @@ ol > li::before {
 
 .form-inline.search .form-control {
     background-color: rgba(0, 0, 0, 0.25);
-    border-color: rgba(0, 0, 0, 0.25);
     font-size: $font-size-base;
 }
 
@@ -605,8 +604,10 @@ ol > li::before {
 // Inputs
 
 .form-control {
-    color: $gray-600;
-    border-color: $input-border-color;
+    color: $text-muted;
+    border-color: transparent;
+    border-width: 2px;
+    background: $gray-100;
     transition: none;
 }
 
@@ -623,7 +624,7 @@ ol > li::before {
     color: $black;
     background-color: #ffffff;
     outline: 0;
-    border-color: $gray-400;
+    border-color: $primary;
     box-shadow: none;
 }
 
