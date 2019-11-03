@@ -108,10 +108,14 @@ def sign_up_get(v):
                        msg=bytes(formkey_hashstr, "utf-16")
                        ).hexdigest()
 
+    redir = request.args.get("redirect",None)
+        
+
     return render_template("sign_up.html",
                            formkey=formkey,
                            now=now,
-                           i=image
+                           i=image,
+                           redirect=redir
                            )
 
 #signup api
@@ -215,8 +219,12 @@ def sign_up_post(v):
 
     session["user_id"]=new_user.id
     session["session_id"]=token_hex(16)
-    
-    return redirect(new_user.permalink)
+
+    redir=request.form.get("redirect")
+    if redir:
+        return redirect(redir)
+    else:
+        return redirect(new_user.permalink)
     
 
 @app.route("/forgot", methods=["GET"])
