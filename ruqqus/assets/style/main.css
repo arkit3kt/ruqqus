@@ -12807,26 +12807,32 @@ label.terms {
   min-width: 40px;
 }
 
-.arrow-up {
+.arrow-up::before {
   cursor: pointer;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-bottom: 12px solid #C2C2C2;
-  width: 0;
-  height: 0;
-  position: relative;
-  top: -5px;
+  color: #C2C2C2;
+  font-family: "Font Awesome 5 Pro";
+  content: "";
 }
 
-.arrow-down {
+.arrow-down::before {
   cursor: pointer;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-top: 12px solid #C2C2C2;
-  width: 0;
-  height: 0;
-  position: relative;
-  bottom: -5px;
+  color: #C2C2C2;
+  font-family: "Font Awesome 5 Pro";
+  content: "";
+}
+
+.upvoted .arrow-up::before {
+  cursor: pointer;
+  color: #6350CC;
+  font-family: "Font Awesome 5 Pro";
+  content: "";
+}
+
+.downvoted .arrow-down::before {
+  cursor: pointer;
+  color: #48A9A6;
+  font-family: "Font Awesome 5 Pro";
+  content: "";
 }
 
 .comment-actions .arrow-up {
@@ -12835,16 +12841,6 @@ label.terms {
 
 .comment-actions .arrow-down {
   bottom: 0;
-}
-
-.upvoted .arrow-up {
-  cursor: pointer;
-  border-bottom: 12px solid #6350CC;
-}
-
-.downvoted .arrow-down {
-  cursor: pointer;
-  border-top: 12px solid #48A9A6;
 }
 
 .upvoted .arrow-mobile-up {
@@ -14358,7 +14354,7 @@ pre .clo, pre .opn, pre .pun, code .clo, code .opn, code .pun {
   }
 
   #frontpage .posts .card:hover {
-    background-color: none;
+    background-color: transparent;
   }
 
   #frontpage .posts .card .post-img {
