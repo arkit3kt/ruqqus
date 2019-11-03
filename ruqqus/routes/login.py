@@ -50,7 +50,13 @@ def login_post():
         session["user_id"]=account.id
         session["session_id"]=token_hex(16)
 
-        return redirect(account.url)
+        #check for previous page
+
+        redir=request.form.get("redirect", None)
+        if redir:
+            return redirect(redir)
+        else:
+            return redirect(account.url)
 
     else:
         time.sleep(random.uniform(0,2))
