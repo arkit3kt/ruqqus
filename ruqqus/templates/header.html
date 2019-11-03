@@ -76,7 +76,7 @@
       </li>
       {% else %}
       <li class="nav-item d-flex align-items-center justify-content-center mx-1">
-       <a class="btn btn-primary" href="/login">Sign In</a>
+       <a class="btn btn-primary" href="/login?redirect={{ escape(request.path) }}">Sign In</a>
      </li>
      <li class="nav-item d-flex align-items-center justify-content-center mx-1">
        <a class="btn btn-outline-white" href="/signup">Sign Up</a>
