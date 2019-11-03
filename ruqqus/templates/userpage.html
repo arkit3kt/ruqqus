@@ -197,7 +197,7 @@
     </div>
     <h1 class="h6 d-inline-block text-gray mb-3">@{{ u.username }}</h1>
     <span>
-      {% if u.admin_level>=3 %}<i class="fad fa-badge-check text-primary text-lg" data-toggle="tooltip" data-placement="bottom" title="Admin"></i>{% endif %}
+      {% if u.admin_level>=3 %}<i class="fad fa-badge-check text-primary text-lg ml-1" data-toggle="tooltip" data-placement="bottom" title="Admin"></i>{% endif %}
       {% if u.real_id %}<span class="badge badge-pill text-white badge-info">{{ u.real_id }}</span>{% endif %}
     </span>
     <p class="text-muted text-small px-3">
