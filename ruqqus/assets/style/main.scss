@@ -652,6 +652,10 @@ label {
     color: $black;
 }
 
+.form-control label {
+    pointer-events: none;
+}
+
 #login label {
     color: $black;
 }

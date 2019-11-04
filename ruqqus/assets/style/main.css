@@ -12711,6 +12711,10 @@ label {
   color: #1E1E24;
 }
 
+.form-control label {
+  pointer-events: none;
+}
+
 #login label {
   color: #1E1E24;
 }
