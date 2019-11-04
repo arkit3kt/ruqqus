@@ -10,10 +10,10 @@
 
             {% if error %}
 <div class="alert alert-danger alert-dismissible fade show my-3" role="alert">
-<i class="fas fa-exclamation-circle text-lg my-auto"></i>
-<div>
+<i class="fas fa-exclamation-circle"></i>
+<span>
   {{ error }}
- </div>
+ </span>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
@@ -21,10 +21,10 @@
 {% endif %}
 {% if msg %}
 <div class="alert alert-success alert-dismissible fade show my-3" role="alert">
-<i class="fas fa-check-circle text-lg my-auto" aria-hidden="true"></i>
-<div>
+<i class="fas fa-check-circle" aria-hidden="true"></i>
+<span>
   {{ msg }}
-</div>
+</span>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
