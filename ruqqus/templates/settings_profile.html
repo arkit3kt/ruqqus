@@ -75,13 +75,13 @@
                         <label for="usernameVerification">Reddit</label>
                     </div>
 
-                    <div class="body w-lg-50">
+                    <div class="body w-lg-75">
                        <form id="removeReddit" action="/api/del_reddit_name" method="post">
 
                         <input type="hidden" name="formkey" value="{{ v.formkey }}">
 
-                        <button form="removeReddit" class="btn btn-reddit ml-auto" id="usernameVerification" value="">
-                            <i class="fab fa-reddit-alien align-middle mr-2"
+                        <button form="removeReddit" class="btn btn-light border ml-auto" id="usernameVerification" value="">
+                            <i class="fab fa-reddit-alien text-reddit align-middle mr-2"
                             style="font-size: 16px"></i>
                             <span class="align-middle">Unlink Reddit</span>
                         </button>
@@ -102,7 +102,7 @@
                     <div class="body w-lg-75">
 
                        <a href="/api/get_reddit_auth">
-                        <button class="btn btn-reddit ml-auto" id="usernameVerification">
+                        <button class="btn btn-secondary ml-auto" id="usernameVerification">
                             <i class="fab fa-reddit-alien align-middle mr-2"
                             style="font-size: 16px"></i>
                             <span class="align-middle">Link Reddit</span>
