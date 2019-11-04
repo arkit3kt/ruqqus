@@ -12709,9 +12709,6 @@ label {
   font-size: 12px;
   letter-spacing: 0.5px;
   color: #1E1E24;
-}
-
-.form-control label {
   pointer-events: none;
 }
 
