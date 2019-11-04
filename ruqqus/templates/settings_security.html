@@ -147,20 +147,37 @@
                                 <form  action="/settings/security" method="post">
 				<input type="hidden" name="formkey" value="{{ v.formkey }}">
 
-                                    <div class="body d-lg-flex">
+                                    <div class="body">
+
+                                    <div class="d-lg-flex">
                                      
                                         <label for="new-email" class="w-lg-25">Email</label>
 
-                                        <input autocomplete="new-password" class="form-control w-lg-75" id="new_email" placeholder="{{ v.email }}"
+                                        <div class="w-lg-75">
+
+                                        <input autocomplete="new-password" class="form-control" id="new_email" placeholder="{{ v.email }}"
                                             aria-describedby="new_email" type="email" name="new_email" required>
                                             {% if not v.is_activated %}
                                             <div class="text-danger text-small-extra mt-1" id="email-verify-text">Email not verified. <u><a href="javascript:void(0)" onclick="post('/api/verify_email');emailVerifyText();" class="text-danger">Verify now.</a></u></div>
                                             {% endif %}
 
-					<label for="email-password" class="mt-3 d-none" id="email-password-label">Password</label>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="d-lg-flex">
+
+					<label for="email-password" class="mt-3 w-lg-25 d-none" id="email-password-label">Password</label>
+
+                    <div class="w-lg-75">
+
 					<input autocomplete="new-password" type="password" class="form-control mb-2 d-none" id="email-password" name="password" required>
 
                     <small id="emailpasswordRequired" class="form-text font-weight-bold text-danger d-none mt-1">Password required to update your email.</small>
+
+                    </div>
+
+                    </div>
 
                                     </div>
 
