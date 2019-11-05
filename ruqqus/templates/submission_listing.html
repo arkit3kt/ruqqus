@@ -25,7 +25,7 @@
       <div class="dropdown-menu border-0 shadow dropdown-menu-right mt-2"
       aria-labelledby="dropdownMoreLink">
       <a href="javascript:void(0);" role="button" class="dropdown-item copy-link" data-clipboard-text="https://www.ruqqus.com{{ p.permalink }}"><i class="fas fa-link"></i>Copy link</a>
-      <a class="dropdown-item" href="#"><i class="fas fa-save"></i>Save</a>
+      <a class="dropdown-item d-none" href="#"><i class="fas fa-save"></i>Save</a>
       <a class="dropdown-item" href="#"><i class="fas fa-flag"></i>Flag</a>
       {% if v %}
       {% if v.admin_level >=1 %}
@@ -85,7 +85,7 @@
         </a>
 
         <div class="dropdown-menu dropdown-menu-right border-0 shadow" aria-labelledby="dropdownMoreLink">
-          <a class="dropdown-item" href="#"><i class="fas fa-save"></i>Save</a>
+          <a class="dropdown-item d-none" href="#"><i class="fas fa-save"></i>Save</a>
           <a class="dropdown-item" href="#"><i class="fas fa-flag"></i>Flag</a>
           {% if v %}
           {% if v.admin_level >=1 %}
