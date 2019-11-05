@@ -13682,10 +13682,11 @@ ul.comment-section {
   font-size: 13px;
 }
 
-.profile-actions .fa, .profile-actions .fas, .profile-actions .far {
+.profile-actions .dropdown .dropdown-menu .dropdown-item .fa, .profile-actions .dropdown .dropdown-menu .dropdown-item .fas, .profile-actions .dropdown .dropdown-menu .dropdown-item .far {
   font-size: 13px;
   color: #ACACAC;
   width: 1rem;
+  margin-right: 0.5rem;
 }
 
 .profile-actions .dropdown-item:active .fa, .profile-actions .dropdown-item:active .fas, .profile-actions .dropdown-item:active .far {
