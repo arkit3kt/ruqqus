@@ -13674,6 +13674,11 @@ ul.comment-section {
   font-size: 13px;
 }
 
+.profile-actions .fa, .profile-actions .fas, .profile-actions .far {
+  font-size: 13px;
+  color: #ACACAC;
+}
+
 .profile-actions .dropdown-item:hover {
   color: #1E1E24;
 }
