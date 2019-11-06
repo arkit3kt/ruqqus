@@ -53,6 +53,36 @@
 <script src="/assets/js/progressbar.js" defer></script>
 {% endblock %}
 
+{% block actionsModal %}
+<!-- Post Actions Modal -->
+<div class="modal fade d-md-none" id="actionsModal" tabindex="-1" role="dialog" aria-labelledby="actionsModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+      </button>
+  </div>
+  <div class="modal-body">
+    <ul class="list-group">
+      <li class="list-group-item d-none"><a href="#"><i class="fas fa-save"></i>Save</a></li>
+      <li class="list-group-item"><a href="#"><i class="fas fa-flag"></i>Flag</a></li>
+      {% if v %}
+      {% if v.admin_level >=1 %}
+      {% if p.is_banned %}
+      <li class="list-group-item"><a id="moderate-post-{{ p.base36id }}" href="javascript:void(0)" onclick="approvePost('{{ p.base36id }}')"><i class="fas fa-clipboard-check"></i>Approve</a></li>
+      {% else %}
+      <li class="list-group-item"><a id="moderate-post-{{ p.base36id }}" href="javascript:void(0)" onclick="removePost('{{ p.base36id }}')"><i class="fas fa-trash-alt"></i>Remove</a></li>
+      {% endif %}
+      {% endif %}
+      {% endif %}
+  </ul>
+</div>
+</div>
+</div>
+</div>
+{% endblock %}
+
 {% block sidebarblock %}
 <div class="sidebar-section sidebar-post-meta">
     <div class="body">
@@ -187,8 +217,8 @@
     <div class="row no-gutters mt-3 d-block d-md-none">
         <div class="col">
            <a target="_blank" href="{{ p.url }}">{% if p.url.endswith((".jpg",".png")) %}<img src="{{ p.url }}" class="img-fluid" alt="post image">
-           <div class="post-img-overlay d-block d-md-none">{{ p.domain }}<i class="fas fa-external-link-alt text-small ml-2"></i></div>
-           {% endif %}
+               <div class="post-img-overlay d-block d-md-none">{{ p.domain }}<i class="fas fa-external-link-alt text-small ml-2"></i></div>
+               {% endif %}
            </a>
        </div>
    </div>
@@ -205,27 +235,10 @@
 
                 <li class="list-inline-item"><a href="javascript:void(0);" role="button" class="copy-link" data-clipboard-text="https://www.ruqqus.com{{ p.permalink }}"><i class="fas fa-link"></i>Share</a></li>
                 <li class="list-inline-item">
-                    <div class="dropdown show">
-                      <a href="#" role="button" id="dropdownMoreLink" data-toggle="dropdown" aria-haspopup="true"
-                      aria-expanded="false">
+                  <a href="#" data-toggle="modal" data-target="#actionsModal">
                       <i class="fas fa-ellipsis-h"></i>
                   </a>
-
-                  <div class="dropdown-menu border-0 shadow" aria-labelledby="dropdownMoreLink">
-                    <a class="dropdown-item d-none" href="#"><i class="fas fa-save"></i>Save</a>
-                    <a class="dropdown-item" href="#"><i class="fas fa-flag"></i>Flag</a>
-                    {% if v %}
-                    {% if v.admin_level >=1 %}
-                    {% if p.is_banned %}
-                    <div class="dropdown-divider"></div>
-                    <h6 class="dropdown-header">Admin actions</h6>
-                    <a class="dropdown-item approveDropdownItem" id="moderate-post-{{ p.base36id }}" href="javascript:void(0)" onclick="approvePost('{{ p.base36id }}')"><i class="fas fa-clipboard-check"></i>Approve</a>
-                    {% else %}
-                    <a class="dropdown-item removeDropdownItem" id="moderate-post-{{ p.base36id }}" href="javascript:void(0)" onclick="removePost('{{ p.base36id }}')"><i class="fas fa-trash-alt"></i>Remove</a>
-                    {% endif %}
-                    {% endif %}
-                    {% endif %}
-                </div>
+                </li>
             </div>
         </li>
         <li id="voting-{{ p.base36id }}-mobile" class="voting list-inline-item d-md-none">
