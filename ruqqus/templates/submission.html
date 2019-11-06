@@ -216,12 +216,12 @@
 
     <div class="row no-gutters mt-3 d-block d-md-none">
         <div class="col">
-           <a target="_blank" href="{{ p.url }}">{% if p.url.endswith((".jpg",".png")) %}<img src="{{ p.url }}" class="img-fluid" alt="post image">
-               <div class="post-img-overlay d-block d-md-none">{{ p.domain }}<i class="fas fa-external-link-alt text-small ml-2"></i></div>
-               {% endif %}
-           </a>
-       </div>
-   </div>
+         <a target="_blank" href="{{ p.url }}">{% if p.url.endswith((".jpg",".png")) %}<img src="{{ p.url }}" class="img-fluid" alt="post image">
+             <div class="post-img-overlay d-block d-md-none">{{ p.domain }}<i class="fas fa-external-link-alt text-small ml-2"></i></div>
+             {% endif %}
+         </a>
+     </div>
+ </div>
 
 </div>
 
@@ -238,27 +238,25 @@
                   <a href="#" data-toggle="modal" data-target="#actionsModal">
                       <i class="fas fa-ellipsis-h"></i>
                   </a>
-                </li>
-            </div>
-        </li>
-        <li id="voting-{{ p.base36id }}-mobile" class="voting list-inline-item d-md-none">
-            <span id="arrow-{{ p.base36id }}-mobile-up" class="mr-2 arrow-mobile-up" onclick="vote('{{ p.base36id }}','0')">
-                <i class="fas fa-arrow-alt-up mx-0" aria-hidden="true"></i>
-            </span>
+              </li>
+              <li id="voting-{{ p.base36id }}-mobile" class="voting list-inline-item d-md-none">
+                <span id="arrow-{{ p.base36id }}-mobile-up" class="mr-2 arrow-mobile-up" onclick="vote('{{ p.base36id }}','0')">
+                    <i class="fas fa-arrow-alt-up mx-0" aria-hidden="true"></i>
+                </span>
 
 
-            
-            <span id="post-{{ p.base36id }}-score-mobile-up" class="score-up text-muted d-none">{{ score+1 }}</span>
-            <span id="post-{{ p.base36id }}-score-mobile-none" class="score text-muted">{{ score }}</span>
-            <span id="post-{{ p.base36id }}-score-mobile-down" class="score-down text-muted d-none">{{ score-1 }}</span>
+                
+                <span id="post-{{ p.base36id }}-score-mobile-up" class="score-up text-muted d-none">{{ score+1 }}</span>
+                <span id="post-{{ p.base36id }}-score-mobile-none" class="score text-muted">{{ score }}</span>
+                <span id="post-{{ p.base36id }}-score-mobile-down" class="score-down text-muted d-none">{{ score-1 }}</span>
 
 
-            <span id="arrow-{{ p.base36id }}-mobile-down" class="arrow-mobile-down ml-2 my-0" onclick="vote('{{ p.base36id }}','-1')">
-                <i class="fas fa-arrow-alt-down mx-0" aria-hidden="true"></i>
-            </span>
-        </li>
-    </ul>
-</div>
+                <span id="arrow-{{ p.base36id }}-mobile-down" class="arrow-mobile-down ml-2 my-0" onclick="vote('{{ p.base36id }}','-1')">
+                    <i class="fas fa-arrow-alt-down mx-0" aria-hidden="true"></i>
+                </span>
+            </li>
+        </ul>
+    </div>
 
 </div>
 
@@ -302,10 +300,10 @@
     {% endif %}
 
     <div class="comment-section">
-       {% for c in p.replies %}
-       {{ c.rendered_comment(v=v) | safe }}
-       {% endfor %}
-   </div>
+     {% for c in p.replies %}
+     {{ c.rendered_comment(v=v) | safe }}
+     {% endfor %}
+ </div>
 
 </div>
 
