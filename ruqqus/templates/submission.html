@@ -64,15 +64,15 @@
       </button>
   </div>
   <div class="modal-body">
-    <ul class="list-group">
-      <li class="list-group-item d-none"><a href="#"><i class="fas fa-save"></i>Save</a></li>
-      <li class="list-group-item"><a href="#"><i class="fas fa-flag"></i>Flag</a></li>
+  <ul class="list-group post-actions">
+      <li class="list-group-item d-none"><a href="#" class="d-block"><i class="fas fa-save"></i>Save</a></li>
+      <li class="list-group-item"><a href="#" class="d-block"><i class="fas fa-flag"></i>Flag</a></li>
       {% if v %}
       {% if v.admin_level >=1 %}
       {% if p.is_banned %}
-      <li class="list-group-item"><a id="moderate-post-{{ p.base36id }}" href="javascript:void(0)" onclick="approvePost('{{ p.base36id }}')"><i class="fas fa-clipboard-check"></i>Approve</a></li>
+      <li class="list-group-item"><a class="d-block"id="moderate-post-{{ p.base36id }}" href="javascript:void(0)" onclick="approvePost('{{ p.base36id }}')"><i class="fas fa-clipboard-check"></i>Approve</a></li>
       {% else %}
-      <li class="list-group-item"><a id="moderate-post-{{ p.base36id }}" href="javascript:void(0)" onclick="removePost('{{ p.base36id }}')"><i class="fas fa-trash-alt"></i>Remove</a></li>
+      <li class="list-group-item"><a class="d-block" id="moderate-post-{{ p.base36id }}" href="javascript:void(0)" onclick="removePost('{{ p.base36id }}')"><i class="fas fa-trash-alt"></i>Remove</a></li>
       {% endif %}
       {% endif %}
       {% endif %}
@@ -245,7 +245,7 @@
                 </span>
 
 
-                
+
                 <span id="post-{{ p.base36id }}-score-mobile-up" class="score-up text-muted d-none">{{ score+1 }}</span>
                 <span id="post-{{ p.base36id }}-score-mobile-none" class="score text-muted">{{ score }}</span>
                 <span id="post-{{ p.base36id }}-score-mobile-down" class="score-down text-muted d-none">{{ score-1 }}</span>
