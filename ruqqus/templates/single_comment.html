@@ -90,7 +90,7 @@
                 </div>
             </li>
             <li class="list-inlie-item d-inline-block d-md-none">
-                <a data-toggle="modal" data-target="#actionsModal2"><i class="fas fa-ellipsis-h"></i></a>
+                <a data-toggle="modal" data-target="#actionsModal-{{ c.base36id }}"><i class="fas fa-ellipsis-h"></i></a>
             </li>
              <li id="comment-{{ c.base36id }}-up" class="list-inline-item arrow-up d-inline-block d-md-none mr-2" {% if voted==1 %}onclick="vote_comment('{{ c.base36id }}','0')"{% elif voted > -2 %}onclick="vote_comment('{{ c.base36id }}','1')"{% endif %}>
                     </li>
@@ -125,7 +125,7 @@
 </div>
 
 <!-- Comment Actions Modal -->
-<div class="modal fade d-md-none" id="actionsModal2" tabindex="-1" role="dialog" aria-labelledby="actionsModalTitle" aria-hidden="true">
+<div class="modal fade d-md-none" id="actionsModal-{{ c.base36id }}" tabindex="-1" role="dialog" aria-labelledby="actionsModalTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -138,23 +138,6 @@
     <li class="list-group-item"><a class="dropdown-item" href="{{ c.parent.permalink }}"><i class="fas fa-dna"></i>Parent</a></li>
     <li class="list-group-item d-none"><a href="#" class="d-block"><i class="fas fa-save"></i>Save</a></li>
     <li class="list-group-item"><a href="#" class="d-block"><i class="fas fa-flag"></i>Flag</a></li>
-
-
-
-                           <li class="list-group-item"><a class="d-block" id="distinguish-{{ c.base36id }}" href="javascript:void(0)" onclick="undistinguish{% if v.admin_level>=4 %}Admin{% else %}Mod{% endif %}Comment('{{ c.base36id }}')"><i class="fas fa-id-badge"></i>Undistinguish</a></li>
-                        {% else %}
-                        <li class="list-group-item"><a class="d-block" id="distinguish-{{ c.base36id }}" href="javascript:void(0)" onclick="distinguish{% if v.admin_level>=4 %}Admin{% else %}Mod{% endif %}Comment('{{ c.base36id }}')"><i class="fas fa-id-badge"></i>Distinguish</a></li>
-
-                        {% endif %}
-                        {% endif %}
-                        {% if v.admin_level>=1 and v.admin_level > c.author.admin_level %}
-                        {% if not c.is_banned %}
-                        <li class="list-group-item"><a class="d-block" id="moderate-{{ c.base36id }}" href="javascript:void(0)" onclick="removeComment('{{ c.base36id }}')"><i class="fas fa-trash-alt"></i>Remove</a></li>
-                        {% else %}
-                        <li class="list-group-item"><a class="d-block" id="moderate-{{ c.base36id }}" href="javascript:void(0)" onclick="approveComment('{{ c.base36id }}')"><i class="fas fa-clipboard-check"></i>Approve</a></li>
-                        {% endif %}
-                        {% endif %}
-                        {% endif %}
   </ul>
 </div>
 </div>
