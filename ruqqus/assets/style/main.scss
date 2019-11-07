@@ -1129,6 +1129,12 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
     margin-bottom: 0;
 }
 
+// Modal Post Actions
+
+.modal .post-actions .list-group-item {
+    border: none;
+}
+
 .post-actions {
     position: relative;
     color: $text-muted;
