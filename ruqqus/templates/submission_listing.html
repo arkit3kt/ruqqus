@@ -78,6 +78,11 @@
 
       <li class="list-inline-item"><a href="javascript:void(0);" role="button" class="copy-link" data-clipboard-text="https://www.ruqqus.com{{ p.permalink }}"><i class="fas fa-link"></i>Share</a></li>
       <li class="list-inline-item">
+                  <a href="#" data-toggle="modal" data-target="#actionsModal-{{ p.base36id }}">
+                      <i class="fas fa-ellipsis-h"></i>
+                  </a>
+      </li>
+      <li class="list-inline-item">
         <div class="dropdown show">
           <a href="#" role="button" id="dropdownMoreLink" data-toggle="dropdown" aria-haspopup="true"
           aria-expanded="false">
@@ -118,6 +123,32 @@
       </span>
     </li>
   </ul>
+</div>
+</div>
+
+<!-- Post Actions Modal -->
+<div class="modal fade d-md-none" id="actionsModal-{{ p.base36id }}" tabindex="-1" role="dialog" aria-labelledby="actionsModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <button type="button" class="close position-absolute p-3" data-dismiss="modal" aria-label="Close" style="right: 0; z-index: 10;">
+          <span aria-hidden="true"><i class="far fa-times"></i></span>
+      </button>
+  <div class="modal-body">
+  <ul class="list-group post-actions">
+      <li class="list-group-item d-none"><a href="#" class="d-block"><i class="fas fa-save"></i>Save</a></li>
+      <li class="list-group-item"><a href="#" class="d-block"><i class="fas fa-flag"></i>Flag</a></li>
+          {% if v %}
+          {% if v.admin_level >=1 %}
+          {% if p.is_banned %}
+          <li class="list-group-item"><a class="d-block" id="moderate-post-{{ p.base36id }}" href="javascript:void(0)" onclick="approvePost('{{ p.base36id }}')"><i class="fas fa-clipboard-check"></i>Approve</a></li>
+          {% else %}
+          <li class="list-group-item"><a class="d-block" id="moderate-post-{{ p.base36id }}" href="javascript:void(0)" onclick="removePost('{{ p.base36id }}')"><i class="fas fa-trash-alt"></i>Remove</a></li>
+          {% endif %}
+          {% endif %}
+          {% endif %}
+  </ul>
+</div>
+</div>
 </div>
 </div>
 
