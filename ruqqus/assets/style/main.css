@@ -12408,8 +12408,8 @@ ol > li::before {
   bottom: 0;
 }
 
-.alert .fa.text-lg, .alert .fas.text-lg, .alert .far.text-lg, .alert .fab.text-lg {
-  margin-right: 1.25rem;
+.alert .fa, .alert .fas, .alert .far, .alert .fab {
+  margin-right: 0.5rem;
 }
 
 .toast {
