@@ -13168,6 +13168,10 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
   border: none;
 }
 
+.modal .post-actions .list-group-item:focus, .modal .post-actions .list-group-item:hover {
+  background-color: #EBE9EF;
+}
+
 .post-actions {
   position: relative;
   color: #7D7D7D;
@@ -13358,6 +13362,14 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 .comment .comment-body p.text {
   margin-bottom: 1rem;
   word-break: break-word;
+}
+
+.modal .comment-actions .list-group-item {
+  border: none;
+}
+
+.modal .comment-actions .list-group-item:focus, .modal .comment-actions .list-group-item:hover {
+  background-color: #EBE9EF;
 }
 
 .comment-actions {
