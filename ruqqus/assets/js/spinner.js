@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$('#login_form').submit(function() {
+	$('#login').submit(function() {
       // disable button
       $("#login_button").prop("disabled", true);
       // add spinner to button
@@ -10,22 +10,22 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-	$('#register_form').submit(function() {
+	$('#signup').submit(function() {
       // disable button
-      $("#login_button").prop("disabled", true);
+      $("#register_button").prop("disabled", true);
       // add spinner to button
-      $("#login_button").html(
+      $("#register_button").html(
         `<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Registering`
       );
     });
 });
 
 $(document).ready(function() {
-	$('#submit_form').submit(function() {
+	$('#submitform').submit(function() {
       // disable button
-      $("#submit_button").prop("disabled", true);
+      $("#create_button").prop("disabled", true);
       // add spinner to button
-      $("#submit_button").html(
+      $("#create_button").html(
         `<span class="spinner-border spinner-border-sm mr-2" role="status" aria-hidden="true"></span>Creating post`
       );
     });
