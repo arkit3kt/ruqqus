@@ -5,10 +5,6 @@ from urllib.parse import urlparse
 from ruqqus.classes import Domain
 from ruqqus.__main__ import db, app
 
-config=yaml.safe_load(open(environ.get("banlist"), "r+"))
-
-
-
 def filter_post(url):
 
     domain=urlparse(url).netloc
