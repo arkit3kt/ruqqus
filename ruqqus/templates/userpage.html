@@ -35,7 +35,7 @@
 {% block sidebarblock %}
 <div class="sidebar-section sidebar-profile-basic">
   <div class="body">
-  <h1 class="h6 d-inline-block mb-0" style="color:#{{ u.color }}">@{{ u.username }}</h1>
+    <h1 class="h6 d-inline-block mb-0" style="color:#{{ u.color }}">@{{ u.username }}</h1>
     <span>
       {% if u.admin_level>=3 %}<i class="fad fa-badge-check text-primary ml-1" data-toggle="tooltip" data-placement="bottom" title="Admin"></i>{% endif %}
       {% if u.real_id %}<span class="badge badge-pill text-white badge-info">{{ u.real_id }}</span>{% endif %}
@@ -206,8 +206,8 @@
     </p>
     {% else %}
     {% endif %}
-      {% if v and v.id != u.id %}
-      <div class="profile-actions d-inline-block">
+    {% if v and v.id != u.id %}
+    <div class="profile-actions d-inline-block">
       <!-- Modal -->
       <a href="#"><i class="fas fa-ellipsis-h ml-2" data-toggle="modal" data-target="#profileModal"></i></a>
 
@@ -223,16 +223,15 @@
           </div>
         </div>
       </div>
-      </div>
-      {% endif %}
-      {% if v and v.id == u.id %}
+    </div>
+    {% endif %}
+    {% if v and v.id == u.id %}
 
-      <div class="mb-3">
-    <a href="/submit" class="btn btn-primary btn-sm mr-2"><i class="fas fa-feather-alt mr-2"></i>Create post</a>
-    <a href="/settings/profile#bio" class="btn btn-outline-gray btn-sm"><i class="fas fa-user-edit mr-2"></i>Edit profile</a>
+    <div class="mb-3">
+      <a href="/settings/profile#bio" class="btn btn-outline-gray btn-sm"><i class="fas fa-user-edit mr-2"></i>Edit profile</a>
     </div>
 
-      {% endif %} 
+    {% endif %} 
 
   </div>
 </div>
