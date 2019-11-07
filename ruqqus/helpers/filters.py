@@ -22,7 +22,7 @@ def filter_post(url):
 
     #search db for options
     
-    ban=db.query(Domain).where(Domain.domain.in_(domains)).first()
+    ban=db.query(Domain).filter(Domain.domain.in_(domains)).first()
 
     if ban:
         reasons=['',
