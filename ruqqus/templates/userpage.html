@@ -62,7 +62,7 @@
   </a>
 
   <div class="dropdown-menu dropdown-menu-right border-0 shadow" aria-labelledby="dropdownMoreLink">
-    <a class="dropdown-item" href="/settings/profile#bio"><i class="fas fa-user-circle"></i>Edit profile</a>
+    <a class="dropdown-item" href="/settings/profile#bio"><i class="fas fa-user-edit"></i>Edit profile</a>
     <a class="dropdown-item" href="/settings/security"><i class="fas fa-cog"></i>Account details</a>
   </div>
 </div>
@@ -206,8 +206,8 @@
     </p>
     {% else %}
     {% endif %}
-    <div class="profile-actions d-inline-block">
       {% if v and v.id != u.id %}
+      <div class="profile-actions d-inline-block">
       <!-- Modal -->
       <a href="#"><i class="fas fa-ellipsis-h ml-2" data-toggle="modal" data-target="#profileModal"></i></a>
 
@@ -223,26 +223,16 @@
           </div>
         </div>
       </div>
+      </div>
       {% endif %}
       {% if v and v.id == u.id %}
 
-      <i class="fas fa-ellipsis-h" data-toggle="modal" data-target="#settingsModal"></i>
-
-      <!-- Modal -->
-      <div class="modal fade" id="settingsModal" tabindex="-1" role="dialog" aria-labelledby="Profile Actions" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-body">
-              <div class="list-group">
-                <a href="/settings/profile#bio" class="list-group-item list-group-item-action"><i class="fas fa-user-circle mr-2"></i>Edit profile</a>
-                <a href="/settings/security" class="list-group-item list-group-item-action"><i class="fas fa-cog mr-2"></i>Account details</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {% endif %} 
+      <div class="mb-3">
+    <a href="/submit" class="btn btn-primary btn-sm mr-2"><i class="far fa-feather-alt mr-2"></i>Create post</a>
+    <a href="/settings/profile#bio" class="btn btn-outline-gray btn-sm"><i class="far fa-user-edit mr-2"></i>Edit profile</a>
     </div>
+
+      {% endif %} 
 
   </div>
 </div>
