@@ -67,8 +67,8 @@
 
 <div class="row mt-3 post-img-lg">
   <div class="col px-0">
-  <a target="_blank" href="{{ p.url }}">{% if p.url.endswith((".jpg",".png")) %}<img src="{{ p.url }}" class="img-fluid" alt="post image">{% endif %}</a>
- </div>
+    <a target="_blank" href="{{ p.url }}">{% if p.url.endswith((".jpg",".png")) %}<img src="{{ p.url }}" class="img-fluid" alt="post image">{% endif %}</a>
+  </div>
 </div>
 
 <div class="card-footer d-block d-md-none mt-3">
@@ -78,28 +78,28 @@
 
       <li class="list-inline-item"><a href="javascript:void(0);" role="button" class="copy-link" data-clipboard-text="https://www.ruqqus.com{{ p.permalink }}"><i class="fas fa-link"></i>Share</a></li>
       <li class="list-inline-item">
-                  <a href="#" data-toggle="modal" data-target="#actionsModal-{{ p.base36id }}">
-                      <i class="fas fa-ellipsis-h"></i>
-                  </a>
+        <a href="#" data-toggle="modal" data-target="#actionsModal-{{ p.base36id }}">
+          <i class="fas fa-ellipsis-h"></i>
+        </a>
       </li>
-    <li id="voting-{{ p.base36id }}-mobile" class="voting list-inline-item d-md-none">
-      <span id="arrow-{{ p.base36id }}-mobile-up" class="mr-2 arrow-mobile-up" onclick="vote('{{ p.base36id }}','0')">
-        <i class="fas fa-arrow-alt-up mx-0" aria-hidden="true"></i>
-      </span>
+      <li id="voting-{{ p.base36id }}-mobile" class="voting list-inline-item d-md-none">
+        <span id="arrow-{{ p.base36id }}-mobile-up" class="mr-2 arrow-mobile-up" onclick="vote('{{ p.base36id }}','0')">
+          <i class="fas fa-arrow-alt-up mx-0" aria-hidden="true"></i>
+        </span>
 
 
 
-      <span id="post-{{ p.base36id }}-score-mobile-up" class="score-up text-muted d-none">{{ score+1 }}</span>
-      <span id="post-{{ p.base36id }}-score-mobile-none" class="score text-muted">{{ score }}</span>
-      <span id="post-{{ p.base36id }}-score-mobile-down" class="score-down text-muted d-none">{{ score-1 }}</span>
+        <span id="post-{{ p.base36id }}-score-mobile-up" class="score-up text-muted d-none">{{ score+1 }}</span>
+        <span id="post-{{ p.base36id }}-score-mobile-none" class="score text-muted">{{ score }}</span>
+        <span id="post-{{ p.base36id }}-score-mobile-down" class="score-down text-muted d-none">{{ score-1 }}</span>
 
 
-      <span id="arrow-{{ p.base36id }}-mobile-down" class="arrow-mobile-down ml-2 my-0" onclick="vote('{{ p.base36id }}','-1')">
-        <i class="fas fa-arrow-alt-down mx-0" aria-hidden="true"></i>
-      </span>
-    </li>
-  </ul>
-</div>
+        <span id="arrow-{{ p.base36id }}-mobile-down" class="arrow-mobile-down ml-2 my-0" onclick="vote('{{ p.base36id }}','-1')">
+          <i class="fas fa-arrow-alt-down mx-0" aria-hidden="true"></i>
+        </span>
+      </li>
+    </ul>
+  </div>
 </div>
 
 <!-- Post Actions Modal -->
@@ -107,12 +107,12 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <button type="button" class="close position-absolute p-3" data-dismiss="modal" aria-label="Close" style="right: 0; z-index: 10;">
-          <span aria-hidden="true"><i class="far fa-times"></i></span>
+        <span aria-hidden="true"><i class="far fa-times"></i></span>
       </button>
-  <div class="modal-body">
-  <ul class="list-group post-actions">
-      <li class="list-group-item d-none"><a href="#" class="d-block"><i class="fas fa-save"></i>Save</a></li>
-      <li class="list-group-item"><a href="#" class="d-block"><i class="fas fa-flag"></i>Flag</a></li>
+      <div class="modal-body">
+        <ul class="list-group post-actions">
+          <li class="list-group-item d-none"><a href="#" class="d-block"><i class="fas fa-save"></i>Save</a></li>
+          <li class="list-group-item"><a href="#" class="d-block"><i class="fas fa-flag"></i>Flag</a></li>
           {% if v %}
           {% if v.admin_level >=1 %}
           {% if p.is_banned %}
@@ -122,10 +122,10 @@
           {% endif %}
           {% endif %}
           {% endif %}
-  </ul>
-</div>
-</div>
-</div>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
 
 </div>
