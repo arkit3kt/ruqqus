@@ -14519,7 +14519,7 @@ pre .clo, pre .opn, pre .pun, code .clo, code .opn, code .pun {
   }
 
   .shadow-sm-0 {
-    box-shadow: none;
+    box-shadow: none !important;
   }
 
   .navbar-nav {
