@@ -89,7 +89,7 @@
                 </div>
             </li>
             <li class="list-inline-item d-inline-block d-md-none">
-                <a data-toggle="modal" data-target="#actionsModal-{{ c.base36id }}" data-focus="false"><i class="fas fa-ellipsis-h"></i></a>
+                <a href="#" data-toggle="modal" data-target="#actionsModal-{{ c.base36id }}" data-focus="false"><i class="fas fa-ellipsis-h"></i></a>
             </li>
             <li id="comment-{{ c.base36id }}-up" class="list-inline-item arrow-up d-inline-block d-md-none mr-2" {% if voted==1 %}onclick="vote_comment('{{ c.base36id }}','0')"{% elif voted > -2 %}onclick="vote_comment('{{ c.base36id }}','1')"{% endif %}>
             </li>
