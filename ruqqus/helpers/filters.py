@@ -7,6 +7,8 @@ from ruqqus.__main__ import db, app
 
 config=yaml.safe_load(open(environ.get("banlist"), "r+"))
 
+
+
 def filter_post(url):
 
     domain=urlparse(url).netloc
@@ -23,6 +25,15 @@ def filter_post(url):
         
 
     #search db for options
-    bans=db.query(Domain
+    
+    ban=db.query(Domain).where(Domain.domain.in_(domains)).first()
 
-    return False
+    if ban:
+        reasons=['',
+                 "URL shorteners are not permitted."
+                 ]
+        return reasons[ban.reason]
+    else:
+        return False
+
+
