@@ -231,11 +231,8 @@
             </div>
             {% endif %}
 
-            {% if p.domain == "youtube.com" or p.domain == "m.youtube.com" %}
-            <div class="post-body mt-3">
-              <span id="embedURL" class="d-none">{{ p.url }}</span>
-              <span id="ytEmbed"></span>
-            </div>
+            {% if p.embed_url %}
+            <iframe src="{{ p.embed_url }}">
             {% endif %}
 
           </div>
