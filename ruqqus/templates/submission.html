@@ -226,7 +226,7 @@
 
             {% if p.domain == "youtube.com" or p.domain == "m.youtube.com" %}
             <div class="mb-3">
-                <iframe width="100%" height="475" src="{% p.url %}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen></iframe>
+                <iframe width="100%" height="475" src="{{ p.url }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen></iframe>
             </div>
             {% endif %}
 
