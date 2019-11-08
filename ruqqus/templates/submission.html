@@ -223,6 +223,13 @@
         {% if p.body_html %}
         <div class="post-body mt-3"> 
             {{ p.body_html | safe }}
+
+            {% if p.domain == "youtube.com" or p.domain == "m.youtube.com" %}
+            <div class="mb-3">
+                <iframe width="100%" height="475" src="{% p.domain %}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen></iframe>
+            </div>
+            {% endif %}
+
         </div>
         {% endif %}
 
