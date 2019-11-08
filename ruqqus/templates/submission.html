@@ -53,6 +53,10 @@
 <script src="/assets/js/progressbar.js" defer></script>
 {% endblock %}
 
+{% block embedJS %}
+<script src="/assets/js/yt_embed.js"></script>
+{% endblock %}
+
 {% block actionsModal %}
 <!-- Post Actions Modal -->
 <div class="modal fade d-md-none" id="actionsModal" tabindex="-1" role="dialog" aria-labelledby="actionsModalTitle" aria-hidden="true">
@@ -228,8 +232,9 @@
             {% endif %}
 
             {% if p.domain == "youtube.com" or p.domain == "m.youtube.com" %}
-            <div class="post-body mt-3"> 
-              <iframe width="100%" height="475" src="{{ p.url }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen></iframe>
+            <div class="post-body mt-3">
+              <span id="embedURL" class="d-none">{{ p.url }}</span>
+              <span id="ytEmbed"></span>
             </div>
             {% endif %}
 
