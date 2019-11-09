@@ -14589,16 +14589,16 @@ pre .clo, pre .opn, pre .pun, code .clo, code .opn, code .pun {
     line-height: normal;
   }
 
-  .post-title {
+  #thread .post-title {
     font-size: 16px;
     font-weight: 500;
   }
 
-  .submission .body {
+  #submit .submission .body {
     padding: 0;
   }
 
-  .submission .footer {
+  #submit .submission .footer {
     background: transparent;
     padding: 1rem 0;
   }

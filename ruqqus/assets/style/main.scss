@@ -2157,16 +2157,16 @@ body {
     line-height: normal;
 }
 
-.post-title {
+#thread .post-title {
     font-size: 16px;
     font-weight: $font-weight-medium;
 }
 
-.submission .body {
+#submit .submission .body {
     padding: 0;
 }
 
-.submission .footer {
+#submit .submission .footer {
     background: transparent;
     padding: 1rem 0;
 }
