@@ -1742,6 +1742,25 @@ ul.comment-section {
     filter: brightness(0);
 }
 
+// Animate FA Icons
+
+.ghost {
+    -webkit-animation: ghost 2s infinite  alternate;
+    animation: ghost 2s infinite  alternate;
+};
+@-webkit-keyframes ghost {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+};
+@keyframes ghost {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+};
+@-moz-keyframes ghost {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+};
+
 // Responsive Borders
 
 @each $breakpoint in map-keys($grid-breakpoints) {
