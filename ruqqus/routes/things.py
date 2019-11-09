@@ -1,3 +1,5 @@
+import re
+
 from urllib.parse import urlparse
 import mistletoe
 from sqlalchemy import func
