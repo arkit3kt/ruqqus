@@ -1,5 +1,3 @@
-import re
-
 from urllib.parse import urlparse
 import mistletoe
 from sqlalchemy import func
@@ -138,7 +136,7 @@ def submit_post(v):
     #check for embeddable video
     domain=parsed_url.netloc
     embed=""
-    if domain.endswith("youtube.com"):
+    if domain.endswith(("youtube.com","youtu.be")):
         embed=youtube_embed(url)
     
     new_post=Submission(title=title,
