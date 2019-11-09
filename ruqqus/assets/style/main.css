@@ -13734,12 +13734,11 @@ ul.comment-section {
 
 #page .footer a {
   text-decoration: none;
-  color: #ffffff;
-  opacity: 0.8;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 #page .footer a:hover, #page .footer a:focus, #page .footer a:active {
-  opacity: 1;
+  color: #ffffff;
 }
 
 #page .footer li {
