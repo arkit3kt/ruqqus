@@ -1219,6 +1219,11 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
     margin-right: 0;
 }
 
+.close .far, .close .fab, .close .fal, .close .fas {
+    font-size: 1.25rem;
+    vertical-align: super;
+}
+
 // Pagination
 
 .page-link {
