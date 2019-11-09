@@ -1098,6 +1098,8 @@ def frontlist(sort = "hot", page = 1):
                             <h5 class="card-title text-primary">Create your account</h5>
                             <form action="/signup" method="post" class="mt-3" id="signup">
 
+                            <span class="text-danger">{{ error }}</span><br>
+
                                 <input type="hidden" name="formkey" value="{{ formkey }}">
                                 <input type="hidden" name="now" value="{{ now }}">
 
