@@ -12344,6 +12344,10 @@ ol > li::before {
   border-radius: 0.25rem;
 }
 
+.btn-lg, .btn-group-lg > .btn {
+  font-size: 1.25rem;
+}
+
 .btn-secondary {
   color: #7D7D7D;
 }

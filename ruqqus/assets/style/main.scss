@@ -273,6 +273,10 @@ ol > li::before {
     border-radius: $border-radius;
 }
 
+.btn-lg {
+    font-size: $font-size-lg;
+}
+
 .btn-secondary {
     color: $text-muted;
 }
