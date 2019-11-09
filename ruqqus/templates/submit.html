@@ -22,18 +22,25 @@
     <!-- Ruqqus CSS -->
     <link rel="stylesheet" href="/assets/style/main.css">
 
-    <script>
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function () {
-            var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                document.getElementById("filter-bar-mobile").style.top = "49px";
-            } else {
-                document.getElementById("filter-bar-mobile").style.top = "-98px";
-            }
-            prevScrollpos = currentScrollPos;
-        }
-    </script>
+  {% if v %}
+
+  <script>
+    function post(url, callback, errortext) {
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", url, true);
+      var form = new FormData()
+      form.append("formkey", "{{ v.formkey }}");
+      xhr.withCredentials=true;
+      xhr.onload=callback
+      xhr.onerror=function(){alert(errortext)}
+      xhr.send(form);
+    }
+    function formkey() {
+      return '{{ v.formkey }}';
+    }
+  </script>
+
+  {% endif %}
 
 </head>
 
