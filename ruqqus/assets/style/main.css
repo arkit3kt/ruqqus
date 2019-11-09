@@ -13074,11 +13074,18 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
   margin: auto;
   text-align: center;
   color: #fff;
+  -moz-transform: rotate(-25deg);
+  -ms-transform: rotate(-25deg);
+  -o-transform: rotate(-25deg);
+  -webkit-transform: rotate(-25deg);
+  transform: rotate(-25deg);
 }
 
 .profile-pic .letter {
   line-height: 3.5rem;
   font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .navbar .navbar-nav .profile-pic {
