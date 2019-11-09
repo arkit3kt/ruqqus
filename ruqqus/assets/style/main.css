@@ -12952,7 +12952,7 @@ a:hover .link-arrow {
   background-color: #F1F1F1;
 }
 
-#frontpage .pseudo-submit-form.card .card-body .form-control:active, #frontpage .pseudo-submit-form.card .card-body .form-control:focus {
+#frontpage .pseudo-submit-form.card .card-body .form-control:hover, #frontpage .pseudo-submit-form.card .card-body .form-control:active, #frontpage .pseudo-submit-form.card .card-body .form-control:focus {
   background-color: #ffffff;
 }
 
