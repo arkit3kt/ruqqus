@@ -10,6 +10,6 @@ def youtube_embed(url):
         return "error"
 
     if yt_id and len(yt_id)==11:
-        return yt_id
+        return f"https://youtube.com/embed/{yt_id}"
     else:
         return "error"
