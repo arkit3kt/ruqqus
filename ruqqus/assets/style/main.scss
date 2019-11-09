@@ -2162,6 +2162,15 @@ body {
     font-weight: $font-weight-medium;
 }
 
+#submit .submission .body {
+    padding: 0;
+}
+
+#submit .submission .footer {
+    background: transparent;
+    padding: 1rem 0;
+}
+
 .footer .list-inline-item {
     line-height: 3;
 }
