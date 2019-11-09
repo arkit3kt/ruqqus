@@ -13735,6 +13735,15 @@ ul.comment-section {
 #page .footer a {
   text-decoration: none;
   color: #ffffff;
+  opacity: 0.8;
+}
+
+#page .footer a:hover, #page .footer a:focus, #page .footer a:active {
+  opacity: 1;
+}
+
+#page .footer li {
+  padding: 0.25rem 0;
 }
 
 .footer .list-inline-item {
