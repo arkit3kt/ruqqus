@@ -14549,7 +14549,7 @@ pre .clo, pre .opn, pre .pun, code .clo, code .opn, code .pun {
     font-size: 1rem;
   }
 
-  #thread, #submit {
+  #thread, #submit, #error-401, #error-403, #error-404, #error-405, #error-500 {
     background-color: #ffffff;
   }
 
