@@ -1723,6 +1723,11 @@ ul.comment-section {
     font-weight: $font-weight-bold;
 }
 
+#page .footer a {
+    text-decoration: none;
+    color: $white;
+}
+
 .footer .list-inline-item {
     font-weight: $font-weight-normal;
 }

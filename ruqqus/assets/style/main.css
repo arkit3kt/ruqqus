@@ -13732,6 +13732,11 @@ ul.comment-section {
   font-weight: 600;
 }
 
+#page .footer a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
 .footer .list-inline-item {
   font-weight: 400;
 }
