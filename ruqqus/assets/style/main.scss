@@ -164,7 +164,7 @@ body {
 }
 
 #error-400 .sidebar, #error-401 .sidebar, #error-404 .sidebar, #error-404 .sidebar, #error-405 .sidebar, #error-500 .sidebar {
-    display: none;
+    display: none!important;
 }
 
 // Message pages
@@ -1732,6 +1732,14 @@ ul.comment-section {
 
 .footer.footer-dark a:hover, .footer.footer-dark a:focus, .footer.footer-dark a:active {
     color: $white;
+}
+
+// Empty States
+
+.empty-state-img {
+    width: 200px;
+    opacity: .35;
+    filter: brightness(0);
 }
 
 // Responsive Borders
