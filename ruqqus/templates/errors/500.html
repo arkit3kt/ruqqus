@@ -1,20 +1,26 @@
 {% extends "default.html" %}
 
-{% block pagetype %}error-500{% endblock %}
-
 {% block title %}
 <title>500</title>
 {% endblock %}
 
+{% block pagetype %}error-500{% endblock %}
+
 {% block content %}
-<h1>500 Internal Server Error</h1>
-<p>Something has broken. A master dwarven computersmith has been dispatched to un-break it. Whatever "it" might be.</p>
-{% if v %}
-{% if v.admin_level>3 %}
-<hr>
-<pre>
-{{ e }}
-</pre>
-{% endif %}
-{% endif %}
+<div class="text-center px-3 my-8">
+
+	<i class="fad fa-bug text-muted mb-5" style="font-size: 5rem;"></i>
+	<div class="font-weight-bold text-muted mb-3">505 Internal Server Error. Something has broken :(</div>
+	<div><a href="/" class="btn btn-primary">Go to frontpage</a></div>
+
+	{% if v %}
+	{% if v.admin_level>3 %}
+	<hr>
+	<pre>
+		{{ e }}
+	</pre>
+	{% endif %}
+	{% endif %}
+
+</div>
 {% endblock %}
