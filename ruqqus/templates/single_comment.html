@@ -42,7 +42,7 @@
 
                     {% else %}
 
-                     <li id="comment-{{ c.base36id }}-up" class="list-inline-item arrow-up d-none d-md-inline-block mr-2" onclick="location.href='/login';">
+                    <li id="comment-{{ c.base36id }}-up" class="list-inline-item arrow-up d-none d-md-inline-block mr-2" onclick="location.href='/login';">
                     </li>
 
                     {% endif %}
@@ -156,37 +156,40 @@
 <div class="modal fade d-md-none" id="actionsModal-{{ c.base36id }}" tabindex="-1" role="dialog" aria-labelledby="actionsModalTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-<button type="button" class="close position-absolute p-3" data-dismiss="modal" aria-label="Close" style="right: 0; z-index: 10;">
-          <span aria-hidden="true"><i class="far fa-times"></i></span>
-      </button>
-  <div class="modal-body">
-      <ul class="list-group comment-actions">
-        <li class="list-group-item"><a href="javascript:void(0);" role="button" class="d-block copy-link" data-clipboard-text="https://www.ruqqus.com{{ c.permalink }}"><i class="fas fa-link"></i><span>Share</span></a>
-        <li class="list-group-item"><a class="d-block" href="{{ c.parent.permalink }}"><i class="fas fa-dna"></i>Parent</a></li>
-        <li class="list-group-item d-none"><a href="#" class="d-block"><i class="fas fa-save"></i>Save</a></li>
-        <li class="list-group-item"><a href="#" class="d-block"><i class="fas fa-flag"></i>Flag</a></li>
+        <div class="modal-header">
+            <h5 class="modal-title h6">More options</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true"><i class="far fa-times"></i></span>
+          </button>
+      </div>
+      <div class="modal-body">
+          <ul class="list-group comment-actions">
+            <li class="list-group-item"><a href="javascript:void(0);" role="button" class="d-block copy-link" data-clipboard-text="https://www.ruqqus.com{{ c.permalink }}"><i class="fas fa-link"></i><span>Share</span></a>
+                <li class="list-group-item"><a class="d-block" href="{{ c.parent.permalink }}"><i class="fas fa-dna"></i>Parent</a></li>
+                <li class="list-group-item d-none"><a href="#" class="d-block"><i class="fas fa-save"></i>Save</a></li>
+                <li class="list-group-item"><a href="#" class="d-block"><i class="fas fa-flag"></i>Flag</a></li>
 
-        {% if v %}
-        {% if v.admin_level>=1 and v.id==c.author_id %}
-        {% if c.distinguish_level %}
+                {% if v %}
+                {% if v.admin_level>=1 and v.id==c.author_id %}
+                {% if c.distinguish_level %}
 
-        <li class="list-group-item"><a class="d-block id="distinguish-{{ c.base36id }}" href="javascript:void(0)" onclick="undistinguish{% if v.admin_level>=4 %}Admin{% else %}Mod{% endif %}Comment('{{ c.base36id }}')"><i class="fas fa-id-badge"></i>Undistinguish</a></li>
-        {% else %}
-        <li class="list-group-item"><a class="d-block" id="distinguish-{{ c.base36id }}" href="javascript:void(0)" onclick="distinguish{% if v.admin_level>=4 %}Admin{% else %}Mod{% endif %}Comment('{{ c.base36id }}')"><i class="fas fa-id-badge"></i>Distinguish</a></li>
+                <li class="list-group-item"><a class="d-block id="distinguish-{{ c.base36id }}" href="javascript:void(0)" onclick="undistinguish{% if v.admin_level>=4 %}Admin{% else %}Mod{% endif %}Comment('{{ c.base36id }}')"><i class="fas fa-id-badge"></i>Undistinguish</a></li>
+                {% else %}
+                <li class="list-group-item"><a class="d-block" id="distinguish-{{ c.base36id }}" href="javascript:void(0)" onclick="distinguish{% if v.admin_level>=4 %}Admin{% else %}Mod{% endif %}Comment('{{ c.base36id }}')"><i class="fas fa-id-badge"></i>Distinguish</a></li>
 
-        {% endif %}
-        {% endif %}
-        {% if v.admin_level>=1 and v.admin_level > c.author.admin_level %}
-        {% if not c.is_banned %}
-        <li class="list-group-item"><a class="d-block" id="moderate-{{ c.base36id }}" href="javascript:void(0)" onclick="removeComment('{{ c.base36id }}')"><i class="fas fa-trash-alt"></i>Remove</a></li>
-        {% else %}
-        <li class="list-group-item"><a class="d-block" id="moderate-{{ c.base36id }}" href="javascript:void(0)" onclick="approveComment('{{ c.base36id }}')"><i class="fas fa-clipboard-check"></i>Approve</a></li>
-        {% endif %}
-        {% endif %}
-        {% endif %}
-    </ul>
-</div>
-</div>
+                {% endif %}
+                {% endif %}
+                {% if v.admin_level>=1 and v.admin_level > c.author.admin_level %}
+                {% if not c.is_banned %}
+                <li class="list-group-item"><a class="d-block" id="moderate-{{ c.base36id }}" href="javascript:void(0)" onclick="removeComment('{{ c.base36id }}')"><i class="fas fa-trash-alt"></i>Remove</a></li>
+                {% else %}
+                <li class="list-group-item"><a class="d-block" id="moderate-{{ c.base36id }}" href="javascript:void(0)" onclick="approveComment('{{ c.base36id }}')"><i class="fas fa-clipboard-check"></i>Approve</a></li>
+                {% endif %}
+                {% endif %}
+                {% endif %}
+            </ul>
+        </div>
+    </div>
 </div>
 </div>
 
