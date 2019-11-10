@@ -1707,6 +1707,27 @@ ul.comment-section {
     background-color: $gray-200;
 }
 
+// Modal Profile Actions
+
+.modal .profile-actions .list-group-item {
+    border: none;
+    border-radius: $border-radius;
+}
+
+.modal .profile-actions .list-group-item:focus, .modal .profile-actions .list-group-item:hover {
+    background-color: $gray-200;
+}
+
+.modal .profile-actions a {
+    color: $black;
+    font-size: $font-size-base;
+}
+
+.modal .profile-actions .fa, .modal .profile-actions .fas, .modal .profile-actions .far {
+    width: 1.25rem;
+    font-size: $font-size-base;
+}
+
 // Profile Page
 
 .profile-actions a {

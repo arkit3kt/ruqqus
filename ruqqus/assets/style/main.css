@@ -13720,6 +13720,25 @@ ul.comment-section {
   background-color: #EBE9EF;
 }
 
+.modal .profile-actions .list-group-item {
+  border: none;
+  border-radius: 0.25rem;
+}
+
+.modal .profile-actions .list-group-item:focus, .modal .profile-actions .list-group-item:hover {
+  background-color: #EBE9EF;
+}
+
+.modal .profile-actions a {
+  color: #1E1E24;
+  font-size: 1rem;
+}
+
+.modal .profile-actions .fa, .modal .profile-actions .fas, .modal .profile-actions .far {
+  width: 1.25rem;
+  font-size: 1rem;
+}
+
 .profile-actions a {
   color: #5F5F5F;
   text-decoration: none;

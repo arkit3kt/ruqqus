@@ -214,6 +214,12 @@
       <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="Profile Actions" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title h6">More options</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><i class="far fa-times"></i></span>
+              </button>
+            </div>
             <div class="modal-body">
               <div class="list-group">
                 <a href="/settings/profile#bio" class="list-group-item list-group-item-action"><i class="fas fa-paper-plane mr-2"></i>Message</a>
@@ -228,7 +234,7 @@
     {% if v and v.id == u.id %}
 
     <div class="mb-3">
-    <a href="/settings/profile#bio" class="btn btn-secondary btn-sm"><i class="fas fa-pen mr-2"></i>Edit profile</a>
+      <a href="/settings/profile#bio" class="btn btn-secondary btn-sm"><i class="fas fa-pen mr-2"></i>Edit profile</a>
     </div>
 
     {% endif %} 
