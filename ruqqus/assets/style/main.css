@@ -13391,10 +13391,21 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 
 .modal .comment-actions .list-group-item {
   border: none;
+  border-radius: 0.25rem;
 }
 
 .modal .comment-actions .list-group-item:focus, .modal .comment-actions .list-group-item:hover {
   background-color: #EBE9EF;
+}
+
+.modal .comment-actions a {
+  color: #1E1E24;
+  font-size: 1rem;
+}
+
+.modal .comment-actions .fa, .modal .comment-actions .fas, .modal .comment-actions .far {
+  width: 1.25rem;
+  font-size: 1rem;
 }
 
 .comment-actions {
