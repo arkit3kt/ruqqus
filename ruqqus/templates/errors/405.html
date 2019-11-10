@@ -7,11 +7,14 @@
 {% block pagetype %}error-405{% endblock %}
 
 {% block content %}
-<div class="text-center px-3 my-8">
-
-	<img src="/assets/images/illustrations/key.png" class="empty-state-img mb-3" alt="empty state">
-	<div class="font-weight-bold text-muted mb-3">405 Method Not Allowed</div>
-	<div><a href="/" class="btn btn-primary">Go to frontpage</a></div>
-
+<div class="row justify-content-center">
+	<div class="col-10 col-md-5">
+	<div class="text-center px-3 my-8">
+			<i class="fad fa-ban text-muted mb-5" style="font-size: 5rem;"></i>
+			<h1 class="h5">405 Method Not Allowed</h1>
+			<p class="text-muted mb-5">Careful, stranger. The internet gnomes don’t take kindly to outsiders that don’t follow their customs.</p>
+			<div><a href="/" class="btn btn-primary">Go to frontpage</a></div>
+		</div>
+	</div>
 </div>
 {% endblock %}
