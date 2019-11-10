@@ -191,26 +191,28 @@
 
 <div class="row justify-content-around mx-lg-5 d-block d-lg-none no-gutters">
   <div class="col bg-light border-bottom rounded-md p-3">
-    <div class="profile-details text-center mt-3">
-     <div class="profile-pic mb-3" style="background-color:#{{ u.color }}">
-      <span class="letter">{{ u.username[0] }}</span>
-    </div>
-    <h1 class="h6 d-inline-block text-gray mb-3">@{{ u.username }}</h1>
-    <span>
-      {% if u.admin_level>=3 %}<i class="fad fa-badge-check text-primary ml-1" data-toggle="tooltip" data-placement="bottom" title="Admin"></i>{% endif %}
-      {% if u.real_id %}<span class="badge badge-pill text-white badge-info">{{ u.real_id }}</span>{% endif %}
-    </span>
-    {% if u.bio_html %}
-    <p class="text-muted text-small px-3">
-      {{ u.bio_html | safe }}
-    </p>
-    {% else %}
-    {% endif %}
-    {% if v and v.id != u.id %}
-    <div class="profile-actions d-inline-block">
-      <!-- Modal -->
-      <a href="#"><i class="fas fa-ellipsis-h ml-2" data-toggle="modal" data-target="#profileModal"></i></a>
+    <div class="profile-details mt-3">
+      <div class="text-center">
+       <div class="profile-pic mb-3" style="background-color:#{{ u.color }}">
+        <span class="letter">{{ u.username[0] }}</span>
+      </div>
+      <h1 class="h6 d-inline-block text-gray mb-3">@{{ u.username }}</h1>
+      <span>
+        {% if u.admin_level>=3 %}<i class="fad fa-badge-check text-primary ml-1" data-toggle="tooltip" data-placement="bottom" title="Admin"></i>{% endif %}
+        {% if u.real_id %}<span class="badge badge-pill text-white badge-info">{{ u.real_id }}</span>{% endif %}
+      </span>
+      {% if u.bio_html %}
+      <p class="text-muted text-small px-3">
+        {{ u.bio_html | safe }}
+      </p>
+      {% else %}
+      {% endif %}
+      {% if v and v.id != u.id %}
+      <div class="profile-actions d-inline-block">
+        <!-- Modal -->
+        <a href="#"><i class="fas fa-ellipsis-h ml-2" data-toggle="modal" data-target="#profileModal"></i></a>
 
+      </div>
     </div>
 
     <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="Profile Actions" aria-hidden="true">
