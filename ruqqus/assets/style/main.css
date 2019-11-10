@@ -13185,10 +13185,12 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 
 .modal .post-actions a {
   color: #1E1E24;
+  font-size: 1rem;
 }
 
 .modal .post-actions .fa, .modal .post-actions .fas, .modal .post-actions .far {
   width: 1.25rem;
+  font-size: 1rem;
 }
 
 .post-actions {
