@@ -87,8 +87,13 @@
 
                     <div class="col-12">
 
-                        {% if v.notifications_count>=1 %}
-                        {% else %}
+                        <div class="p-3">
+
+                            {% for c in notifications %}
+
+                            {{ c.rendered_comment(v=v, render_replies=False, standalone=True) | safe }}
+
+                            {% else %}
                         <div class="text-center py-7 py-md-8">
 
                             <img src="https://imgur.com/Ca3Sd7H.png" class="mb-3" style="width: 300px; opacity: .35; filter: brightness(0);" alt="empty state">
@@ -97,12 +102,7 @@
                             <div class="text-small text-muted mb-3">When someone comments or replies, it will show up here.</div>
                             <a href="/" class="btn btn-primary">Go to frontpage</a>
                         </div>
-                        {% endif %}
-
-                        <div class="p-3">
-
-                            {% for c in notifications %}
-                            {{ c.rendered_comment(v=v, render_replies=False, standalone=True) | safe }}
+                        
                             {% endfor %}
 
                         </div>
