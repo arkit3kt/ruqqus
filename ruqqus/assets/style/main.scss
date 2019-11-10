@@ -1136,12 +1136,26 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 
 // Modal Post Actions
 
+.modal-header {
+    border: none;
+    background-color: $light;
+}
+
 .modal .post-actions .list-group-item {
     border: none;
+    border-radius: $border-radius;
 }
 
 .modal .post-actions .list-group-item:focus, .modal .post-actions .list-group-item:hover {
     background-color: $gray-200;
+}
+
+.modal .post-actions a {
+    color: $black;
+}
+
+.modal .post-actions .fa, .modal .post-actions .fas, .modal .post-actions .far {
+    width: 1.25rem;
 }
 
 .post-actions {
@@ -1228,7 +1242,6 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 
 .close .far, .close .fab, .close .fal, .close .fas {
     font-size: 1.25rem;
-    vertical-align: super;
 }
 
 // Pagination

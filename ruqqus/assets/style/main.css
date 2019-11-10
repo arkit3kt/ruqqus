@@ -13169,12 +13169,26 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
   margin-bottom: 0;
 }
 
+.modal-header {
+  border: none;
+  background-color: #FAFAFA;
+}
+
 .modal .post-actions .list-group-item {
   border: none;
+  border-radius: 0.25rem;
 }
 
 .modal .post-actions .list-group-item:focus, .modal .post-actions .list-group-item:hover {
   background-color: #EBE9EF;
+}
+
+.modal .post-actions a {
+  color: #1E1E24;
+}
+
+.modal .post-actions .fa, .modal .post-actions .fas, .modal .post-actions .far {
+  width: 1.25rem;
 }
 
 .post-actions {
@@ -13261,7 +13275,6 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus {
 
 .close .far, .close .fab, .close .fal, .close .fas {
   font-size: 1.25rem;
-  vertical-align: super;
 }
 
 .page-link {
